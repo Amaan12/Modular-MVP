@@ -2,6 +2,9 @@ using System;
 
 namespace DesignPatterns.UI.MVP
 {
+    /// <summary>
+    /// Lightweight serializable struct holding Current and Max values with a Normalized ratio.
+    /// </summary>
     [Serializable]
     public struct StatRange
     {

@@ -23,7 +23,7 @@ To install this package directly into your Unity project's `Packages/` folder:
 
 Once installed, 2 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
 1. **Basic MVP Sample**: Contains `Health.cs`, `IDamageable.cs`, and `MVP.unity` demo scene.
-2. **InitArgs Presenters**: Contains plain C# `InitArgs` presenters and initializers (`OneWay` and `TwoWay`).
+2. **InitArgs Presenters**: Contains plain C# `InitArgs` binders and initializers (`OneWay` and `TwoWay`).
 
 Click **Import** next to either sample to copy it into your project's `Assets/Samples/` folder.
 
@@ -56,9 +56,9 @@ Packages/com.modular.mvp/
     │   ├── IDamageable.cs
     │   ├── Health.cs
     │   └── MVP.unity
-    └── InitArgs/             (Downloadable Sample 2: Plain C# Presenters)
-        ├── OneWay/
-        └── TwoWay/
+    └── InitArgs/             (Downloadable Sample 2: Plain C# Binders)
+        ├── OneWay/           (BinderOneWay.cs, FloatBinderOneWayInitializer.cs, etc.)
+        └── TwoWay/           (BinderTwoWay.cs, FloatBinderTwoWayInitializer.cs, etc.)
 ```
 
 ---
@@ -81,17 +81,17 @@ Packages/com.modular.mvp/
 
 ---
 
-### 3. Presenters (`Presenter/`)
+### 3. Binders / Presenters (`Presenter/`)
 
-Presenters act as the glue between Models and Views. They auto-subscribe on `OnEnable()` and auto-unsubscribe on `OnDisable()`.
+Binders act as the glue between Models and Views. They auto-subscribe on enable and auto-unsubscribe on disable.
 
 #### Standard Unity MonoBehaviours (`Presenter/MonoBehaviours/`)
 * Pure `UnityEngine.MonoBehaviour` classes with zero external framework dependencies.
 * Inspector drag-and-drop auto-binding via 1-line subclass binders (`FloatBinderOneWay`, `StatRangeBinderOneWay`, etc.).
 
-#### InitArgs Plain C# Presenters & Initializers (`Samples~/InitArgs/`)
-* Plain C# classes (`PresenterOneWay<T>`, `PresenterTwoWay<T>`) implementing InitArgs `IInitializable<T1, T2>` and `IDisposable`.
-* Includes InitArgs `WrapperInitializer` components (`FloatPresenterOneWayInitializer`, `StatRangePresenterOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# presenters.
+#### InitArgs Plain C# Binders & Initializers (`Samples~/InitArgs/`)
+* Plain C# binder classes (`BinderOneWay<T>`, `BinderTwoWay<T>`) implementing InitArgs `IInitializable<T1, T2>` and `IDisposable`.
+* Includes InitArgs `WrapperInitializer` binder components (`FloatBinderOneWayInitializer`, `StatRangeBinderOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# binders.
 
 ---
 

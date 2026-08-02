@@ -3,7 +3,11 @@ using Sisus.Init;
 
 namespace DesignPatterns.UI.MVP.InitArgs
 {
-    public class PresenterTwoWay<T> : IInitializable<IStat<T>, ITwoWayView<T>>, IDisposable
+    /// <summary>
+    /// Plain C# 2-way binder implementing InitArgs IInitializable and IDisposable.
+    /// </summary>
+    /// <typeparam name="T">The bound data type.</typeparam>
+    public class BinderTwoWay<T> : IInitializable<IStat<T>, ITwoWayView<T>>, IDisposable
     {
         private IStat<T> model;
         private ITwoWayView<T> view;

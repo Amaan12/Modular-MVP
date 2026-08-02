@@ -1,6 +1,10 @@
+using UnityEngine;
+
 namespace DesignPatterns.UI.MVP
 {
-    public class IntBinderOneWay : UIBinderOneWay<int>
-    {
-    }
+    /// <summary>
+    /// One-way MonoBehaviour binder for integer stats.
+    /// </summary>
+    [AddComponentMenu("MVP/OneWay/Int Binder OneWay")]
+    public class IntBinderOneWay : UIBinderOneWay<int> { }
 }

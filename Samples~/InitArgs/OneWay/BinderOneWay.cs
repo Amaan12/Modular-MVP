@@ -3,7 +3,11 @@ using Sisus.Init;
 
 namespace DesignPatterns.UI.MVP.InitArgs
 {
-    public class PresenterOneWay<T> : IInitializable<IReadOnlyStat<T>, IView<T>>, IDisposable
+    /// <summary>
+    /// Plain C# 1-way binder implementing InitArgs IInitializable and IDisposable.
+    /// </summary>
+    /// <typeparam name="T">The bound data type.</typeparam>
+    public class BinderOneWay<T> : IInitializable<IReadOnlyStat<T>, IView<T>>, IDisposable
     {
         private IReadOnlyStat<T> model;
         private IView<T> view;

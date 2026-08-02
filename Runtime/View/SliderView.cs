@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 namespace DesignPatterns.UI.MVP
 {
+    /// <summary>
+    /// View component that renders and handles user interactions for UnityEngine.UI.Slider components.
+    /// </summary>
     public class SliderView : MonoBehaviour, ITwoWayView<float>, ITwoWayView<StatRange>
     {
         public event Action<float> OnUserInteracted;

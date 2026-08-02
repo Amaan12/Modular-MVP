@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace DesignPatterns.UI.MVP.Sample
 {
+    /// <summary>
+    /// Sample Health component implementing IDamageable and IStat of StatRange.
+    /// </summary>
     public class Health : MonoBehaviour, IDamageable, IStat<StatRange>
     {
         public event Action<StatRange> OnChanged;

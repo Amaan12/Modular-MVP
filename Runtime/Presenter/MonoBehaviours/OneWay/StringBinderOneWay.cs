@@ -1,6 +1,10 @@
+using UnityEngine;
+
 namespace DesignPatterns.UI.MVP
 {
-    public class StringBinderOneWay : UIBinderOneWay<string>
-    {
-    }
+    /// <summary>
+    /// One-way MonoBehaviour binder for string stats.
+    /// </summary>
+    [AddComponentMenu("MVP/OneWay/String Binder OneWay")]
+    public class StringBinderOneWay : UIBinderOneWay<string> { }
 }

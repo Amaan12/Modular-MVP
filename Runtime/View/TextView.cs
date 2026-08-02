@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace DesignPatterns.UI.MVP
 {
+    /// <summary>
+    /// View component that renders text for TMPro.TextMeshProUGUI components.
+    /// </summary>
     public class TextView : MonoBehaviour, IView<string>, IView<int>, IView<float>, IView<StatRange>
     {
         [SerializeField] private TextMeshProUGUI textComponent;

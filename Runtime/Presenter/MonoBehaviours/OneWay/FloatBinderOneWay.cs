@@ -1,6 +1,10 @@
+using UnityEngine;
+
 namespace DesignPatterns.UI.MVP
 {
-    public class FloatBinderOneWay : UIBinderOneWay<float>
-    {
-    }
+    /// <summary>
+    /// One-way MonoBehaviour binder for float stats.
+    /// </summary>
+    [AddComponentMenu("MVP/OneWay/Float Binder OneWay")]
+    public class FloatBinderOneWay : UIBinderOneWay<float> { }
 }

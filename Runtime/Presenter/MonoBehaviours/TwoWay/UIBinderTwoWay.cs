@@ -2,31 +2,35 @@ using UnityEngine;
 
 namespace DesignPatterns.UI.MVP
 {
+    /// <summary>
+    /// Abstract MonoBehaviour binder that synchronizes a read-write stat model with a 2-way interactive view component.
+    /// </summary>
+    /// <typeparam name="T">The bound data type.</typeparam>
     public abstract class UIBinderTwoWay<T> : MonoBehaviour
     {
-        [SerializeField] private MonoBehaviour modelObject;
-        [SerializeField] private MonoBehaviour viewObject;
+        [SerializeField] private MonoBehaviour modelComponent;
+        [SerializeField] private MonoBehaviour viewComponent;
 
         private IStat<T> model;
         private ITwoWayView<T> view;
 
-        protected virtual void Awake()
+        private void Awake()
         {
-            model = modelObject as IStat<T>;
-            view = viewObject as ITwoWayView<T>;
+            model = modelComponent as IStat<T>;
+            view = viewComponent as ITwoWayView<T>;
         }
 
-        protected virtual void OnEnable()
+        private void OnEnable()
         {
-            if (model == null || view == null) return;
-
-            model.OnChanged += view.Render;
-            view.OnUserInteracted += model.Set;
-
-            view.Render(model.Value);
+            if (model != null && view != null)
+            {
+                model.OnChanged += view.Render;
+                view.OnUserInteracted += model.Set;
+                view.Render(model.Value);
+            }
         }
 
-        protected virtual void OnDisable()
+        private void OnDisable()
         {
             if (model != null && view != null)
             {
