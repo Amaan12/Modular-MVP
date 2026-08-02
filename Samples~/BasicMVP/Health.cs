@@ -7,31 +7,24 @@ namespace DesignPatterns.UI.MVP.Sample
     {
         public event Action<StatRange> OnChanged;
 
-        [SerializeField] private float maxHealth = 100f;
-        private float currentHealth;
+        [SerializeField] private StatRange health = new StatRange(100f, 100f);
 
-        public StatRange Value => new StatRange(currentHealth, maxHealth);
-
-        private void Awake()
-        {
-            currentHealth = maxHealth;
-        }
+        public StatRange Value => health;
 
         public void Set(StatRange newRange)
         {
-            currentHealth = Mathf.Clamp(newRange.Current, 0f, newRange.Max);
-            maxHealth = newRange.Max;
-            OnChanged?.Invoke(Value);
+            health = new StatRange(Mathf.Clamp(newRange.Current, 0f, newRange.Max), newRange.Max);
+            OnChanged?.Invoke(health);
         }
 
         public void TakeDamage(float amount)
         {
-            Set(new StatRange(currentHealth - amount, maxHealth));
+            Set(new StatRange(health.Current - amount, health.Max));
         }
 
         public void Heal(float amount)
         {
-            Set(new StatRange(currentHealth + amount, maxHealth));
+            Set(new StatRange(health.Current + amount, health.Max));
         }
     }
 }

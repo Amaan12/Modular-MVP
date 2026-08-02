@@ -15,7 +15,7 @@ To install this package directly into your Unity project's `Packages/` folder:
 3. Click the **`+`** button in the top-left corner and select **"Add package from git URL..."**.
 4. Enter the repository Git URL:
    ```
-   https://github.com/<your-username>/<your-repo-name>.git
+   https://github.com/Amaan12/Modular-MVP.git
    ```
 5. Click **Add**.
 
