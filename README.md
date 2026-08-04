@@ -88,7 +88,7 @@ Packages/com.modular.mvp/
 
 ### 2. Models (`Model/` & `Sample/`)
 
-* **`StatRange`**: A lightweight serializable struct holding `Current`, `Max`, and a helper `Normalized` ratio (`Current / Max`). Used for ranged stats like Health, Stamina, and Mana.
+* **`StatRange`**: A lightweight serializable struct holding `Current`, `Max`, and `Min` values with a helper `Normalized` ratio (`(Current - Min) / (Max - Min)`). Used for ranged stats like Health, Stamina, and Mana.
 * **`IDamageable`**: Sample domain interface extending `IReadOnlyStat<StatRange>`. Gives weapons and hazards safe access to `TakeDamage()` and `Heal()` without exposing full `Set()` mutation.
 * **`Health`**: Sample MonoBehaviour implementing `IDamageable` and `IStat<StatRange>`. Emits `StatRange` events whenever health changes.
 

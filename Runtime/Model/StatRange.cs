@@ -10,13 +10,15 @@ namespace DesignPatterns.UI.MVP
     {
         public float Current;
         public float Max;
+        public float Min;
 
-        public float Normalized => Max > 0f ? Current / Max : 0f;
+        public float Normalized => Max - Min > 0f ? (Current - Min) / (Max - Min) : 0f;
 
-        public StatRange(float current, float max)
+        public StatRange(float current, float max, float min = 0f)
         {
             Current = current;
             Max = max;
+            Min = min;
         }
     }
 }

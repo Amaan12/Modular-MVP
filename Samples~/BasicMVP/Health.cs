@@ -16,18 +16,18 @@ namespace DesignPatterns.UI.MVP.Sample
 
         public void Set(StatRange newRange)
         {
-            health = new StatRange(Mathf.Clamp(newRange.Current, 0f, newRange.Max), newRange.Max);
+            health = new StatRange(Mathf.Clamp(newRange.Current, newRange.Min, newRange.Max), newRange.Max, newRange.Min);
             OnChanged?.Invoke(health);
         }
 
         public void TakeDamage(float amount)
         {
-            Set(new StatRange(health.Current - amount, health.Max));
+            Set(new StatRange(health.Current - amount, health.Max, health.Min));
         }
 
         public void Heal(float amount)
         {
-            Set(new StatRange(health.Current + amount, health.Max));
+            Set(new StatRange(health.Current + amount, health.Max, health.Min));
         }
     }
 }
