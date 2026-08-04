@@ -6,6 +6,17 @@ This framework completely decouples gameplay logic (`Health`, `Stamina`, `AudioS
 
 ---
 
+### 💡 Why MVP?
+
+In traditional Unity development, whenever a UI component needs to react to a value (like health in `Health.cs`), developers often create a custom script like `HealthUI.cs`. That script listens to events from `Health.cs` and updates the health bar directly.
+
+However, this approach is **not reusable**:
+* If you want to use the exact same slider logic (with tweens, animations, or custom formatting) for **Stamina** or **Mana**, you would have to write duplicate scripts (`StaminaUI.cs`, `ManaUI.cs`, etc.).
+
+By using the MVP architecture, we separate the model (e.g., health) from the UI (e.g., the slider). This way, you can use the same slider UI for anything else, like stamina.
+
+---
+
 ## 📦 Installation via Unity Package Manager (Git URL)
 
 To install this package directly into your Unity project's `Packages/` folder:
