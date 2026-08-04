@@ -23,11 +23,32 @@ namespace DesignPatterns.UI.MVP
         {
             if (slider == null)
             {
+                slider = GetComponent<Slider>();
+            }
+
+            if (slider == null)
+            {
                 Debug.LogError("No Slider Component Assigned in the Inspector", this);
                 return;
             }
 
             slider.onValueChanged.AddListener(OnSliderValueChanged);
+        }
+
+        private void OnValidate()
+        {
+            if (slider == null)
+            {
+                slider = GetComponent<Slider>();
+            }
+        }
+
+        private void Reset()
+        {
+            if (slider == null)
+            {
+                slider = GetComponent<Slider>();
+            }
         }
 
         private void OnDestroy()

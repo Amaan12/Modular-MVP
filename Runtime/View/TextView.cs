@@ -14,7 +14,28 @@ namespace DesignPatterns.UI.MVP
         {
             if (textComponent == null)
             {
+                textComponent = GetComponent<TextMeshProUGUI>();
+            }
+
+            if (textComponent == null)
+            {
                 Debug.LogError("No TextMeshProUGUI Component Assigned in the Inspector", this);
+            }
+        }
+
+        private void OnValidate()
+        {
+            if (textComponent == null)
+            {
+                textComponent = GetComponent<TextMeshProUGUI>();
+            }
+        }
+
+        private void Reset()
+        {
+            if (textComponent == null)
+            {
+                textComponent = GetComponent<TextMeshProUGUI>();
             }
         }
 
