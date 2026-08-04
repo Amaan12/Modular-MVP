@@ -22,7 +22,7 @@ To install this package directly into your Unity project's `Packages/` folder:
 ### 📥 Downloading Samples
 
 Once installed, 2 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
-1. **Basic MVP Sample**: Contains `Health.cs`, `IDamageable.cs`, and `MVP.unity` demo scene.
+1. **Basic MVP Sample**: Contains `Health.cs` and `IDamageable.cs` domain scripts.
 2. **InitArgs Presenters**: Contains plain C# `InitArgs` binders and initializers (`OneWay` and `TwoWay`).
 
 Click **Import** next to either sample to copy it into your project's `Assets/Samples/` folder.
@@ -52,10 +52,9 @@ Packages/com.modular.mvp/
 │       ├── SliderView.cs
 │       └── TextView.cs
 └── Samples~/
-    ├── BasicMVP/             (Downloadable Sample 1: Scene & Domain Scripts)
+    ├── BasicMVP/             (Downloadable Sample 1: Domain Scripts)
     │   ├── IDamageable.cs
-    │   ├── Health.cs
-    │   └── MVP.unity
+    │   └── Health.cs
     └── InitArgs/             (Downloadable Sample 2: Plain C# Binders)
         ├── OneWay/           (BinderOneWay.cs, FloatBinderOneWayInitializer.cs, etc.)
         └── TwoWay/           (BinderTwoWay.cs, FloatBinderTwoWayInitializer.cs, etc.)

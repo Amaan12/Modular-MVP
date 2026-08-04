@@ -17,7 +17,7 @@
   "samples": [
     {
       "displayName": "Basic MVP Sample",
-      "description": "Sample scene and domain scripts showing standard MVP UI framework usage.",
+      "description": "Sample domain scripts showing standard MVP UI framework usage.",
       "path": "Samples~/BasicMVP"
     },
     {
