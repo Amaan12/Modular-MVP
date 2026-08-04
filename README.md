@@ -35,11 +35,12 @@ To install this package directly into your Unity project's `Packages/` folder:
 
 ### 📥 Downloading Samples
 
-Once installed, 2 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
-1. **Basic MVP Sample**: Contains `Health.cs` and `IDamageable.cs` domain scripts.
-2. **InitArgs Presenters**: Contains plain C# binders and initializers (`OneWay` and `TwoWay`) for **InitArgs** (a dependency injection asset available on the Unity Asset Store).
+Once installed, 3 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
+1. **Basic MVP Sample**: Basic MVP UI setup with scenes, prefabs, and domain scripts (`Health.cs`, `HealthChanger.cs`).
+2. **DOTween MVP Sample**: DOTween animated UI views (punch, shake, rotate, color flash, pop) with demo scene, prefabs, and scripts.
+3. **InitArgs Presenters**: Plain C# binders and initializers (`OneWay` and `TwoWay`) for **InitArgs** (a dependency injection asset available on the Unity Asset Store).
 
-Click **Import** next to either sample to copy it into your project's `Assets/Samples/` folder.
+Click **Import** next to any sample to copy it into your project's `Assets/Samples/` folder.
 
 ---
 
@@ -66,12 +67,9 @@ Packages/com.modular.mvp/
 │       ├── SliderView.cs
 │       └── TextView.cs
 └── Samples~/
-    ├── BasicMVP/             (Downloadable Sample 1: Domain Scripts)
-    │   ├── IDamageable.cs
-    │   └── Health.cs
-    └── InitArgs/             (Downloadable Sample 2: Plain C# Binders)
-        ├── OneWay/           (BinderOneWay.cs, FloatBinderOneWayInitializer.cs, etc.)
-        └── TwoWay/           (BinderTwoWay.cs, FloatBinderTwoWayInitializer.cs, etc.)
+    ├── BasicMVP/             (Downloadable Sample 1: Basic MVP Setup with Scene & Prefabs)
+    ├── DOTweenMVP/           (Downloadable Sample 2: DOTween Animated Views & Demo Scene)
+    └── InitArgs/             (Downloadable Sample 3: Plain C# Binders)
 ```
 
 ---

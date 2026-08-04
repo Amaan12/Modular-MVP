@@ -21,6 +21,11 @@
       "path": "Samples~/BasicMVP"
     },
     {
+      "displayName": "DOTween MVP Sample",
+      "description": "DOTween animated UI views sample demonstrating punch, shake, rotate, and pop visual effects.",
+      "path": "Samples~/DOTweenMVP"
+    },
+    {
       "displayName": "InitArgs Presenters",
       "description": "InitArgs plain C# presenters and initializers sample (requires InitArgs DI asset from Unity Asset Store).",
       "path": "Samples~/InitArgs"
