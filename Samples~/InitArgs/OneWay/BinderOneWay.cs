@@ -14,6 +14,17 @@ namespace DesignPatterns.UI.MVP.InitArgs
 
         public void Init(IReadOnlyStat<T> model, IView<T> view)
         {
+            if (model == null)
+            {
+                UnityEngine.Debug.LogError($"Model should implement IReadOnlyStat<{typeof(T).Name}>");
+                return;
+            }
+            else if (view == null)
+            {
+                UnityEngine.Debug.LogError($"View should implement IView<{typeof(T).Name}>");
+                return;
+            }
+
             this.model = model;
             this.view = view;
 

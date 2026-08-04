@@ -16,17 +16,48 @@ namespace DesignPatterns.UI.MVP
 
         private void Awake()
         {
+            if (modelComponent == null || viewComponent == null)
+            {
+                Debug.LogError("No Model or View Components Assigned in the Inspector", this);
+                return;
+            }
+
             model = modelComponent as IReadOnlyStat<T>;
             view = viewComponent as IView<T>;
+
+            if (model == null)
+            {
+                Debug.LogError($"Model should implement IReadOnlyStat<{typeof(T).Name}>", this);
+                return;
+            }
+            else if (view == null)
+            {
+                Debug.LogError($"View should implement IView<{typeof(T).Name}>", this);
+                return;
+            }
         }
 
         private void OnEnable()
         {
-            if (model != null && view != null)
+            if (modelComponent == null || viewComponent == null)
             {
-                model.OnChanged += view.Render;
-                view.Render(model.Value);
+                Debug.LogError("No Model or View Components Assigned in the Inspector", this);
+                return;
             }
+
+            if (model == null)
+            {
+                Debug.LogError($"Model should implement IReadOnlyStat<{typeof(T).Name}>", this);
+                return;
+            }
+            else if (view == null)
+            {
+                Debug.LogError($"View should implement IView<{typeof(T).Name}>", this);
+                return;
+            }
+
+            model.OnChanged += view.Render;
+            view.Render(model.Value);
         }
 
         private void OnDisable()

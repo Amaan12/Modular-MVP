@@ -10,6 +10,14 @@ namespace DesignPatterns.UI.MVP
     {
         [SerializeField] private TextMeshProUGUI textComponent;
 
+        private void Awake()
+        {
+            if (textComponent == null)
+            {
+                Debug.LogError("No TextMeshProUGUI Component Assigned in the Inspector", this);
+            }
+        }
+
         public void Render(string text) => SetText(text);
 
         public void Render(int value) => SetText(value.ToString());
@@ -20,10 +28,13 @@ namespace DesignPatterns.UI.MVP
 
         private void SetText(string content)
         {
-            if (textComponent != null)
+            if (textComponent == null)
             {
-                textComponent.text = content;
+                Debug.LogError("No TextMeshProUGUI Component Assigned in the Inspector", this);
+                return;
             }
+
+            textComponent.text = content;
         }
     }
 }

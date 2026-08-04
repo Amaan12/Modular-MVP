@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace DesignPatterns.UI.MVP
 {
@@ -16,9 +17,9 @@ namespace DesignPatterns.UI.MVP
 
         public StatRange(float current, float max, float min = 0f)
         {
-            Current = current;
-            Max = max;
             Min = min;
+            Max = max;
+            Current = Mathf.Clamp(current, min, max);
         }
     }
 }

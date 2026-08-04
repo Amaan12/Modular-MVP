@@ -14,6 +14,17 @@ namespace DesignPatterns.UI.MVP.InitArgs
 
         public void Init(IStat<T> model, ITwoWayView<T> view)
         {
+            if (model == null)
+            {
+                UnityEngine.Debug.LogError($"Model should implement IStat<{typeof(T).Name}>");
+                return;
+            }
+            else if (view == null)
+            {
+                UnityEngine.Debug.LogError($"View should implement ITwoWayView<{typeof(T).Name}>");
+                return;
+            }
+
             this.model = model;
             this.view = view;
 

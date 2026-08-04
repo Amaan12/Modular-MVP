@@ -16,7 +16,7 @@ namespace DesignPatterns.UI.MVP.Sample
 
         public void Set(StatRange newRange)
         {
-            health = new StatRange(Mathf.Clamp(newRange.Current, newRange.Min, newRange.Max), newRange.Max, newRange.Min);
+            health = new StatRange(newRange.Current, newRange.Max, newRange.Min);
             OnChanged?.Invoke(health);
         }
 

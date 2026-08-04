@@ -21,22 +21,43 @@ namespace DesignPatterns.UI.MVP
 
         private void Awake()
         {
-            slider?.onValueChanged.AddListener(OnSliderValueChanged);
+            if (slider == null)
+            {
+                Debug.LogError("No Slider Component Assigned in the Inspector", this);
+                return;
+            }
+
+            slider.onValueChanged.AddListener(OnSliderValueChanged);
         }
 
         private void OnDestroy()
         {
-            slider?.onValueChanged.RemoveListener(OnSliderValueChanged);
+            if (slider != null)
+            {
+                slider.onValueChanged.RemoveListener(OnSliderValueChanged);
+            }
         }
 
         public void Render(float value)
         {
-            slider?.SetValueWithoutNotify(value);
+            if (slider == null)
+            {
+                Debug.LogError("No Slider Component Assigned in the Inspector", this);
+                return;
+            }
+
+            slider.SetValueWithoutNotify(value);
         }
 
         public void Render(StatRange range)
         {
-            slider?.SetValueWithoutNotify(range.Normalized);
+            if (slider == null)
+            {
+                Debug.LogError("No Slider Component Assigned in the Inspector", this);
+                return;
+            }
+
+            slider.SetValueWithoutNotify(range.Normalized);
         }
 
         private void OnSliderValueChanged(float newValue)
