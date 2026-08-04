@@ -102,7 +102,7 @@ Binders act as the glue between Models and Views. They auto-subscribe on enable 
 
 #### InitArgs Plain C# Binders & Initializers (`Samples~/InitArgs/`)
 * Integration for **InitArgs**—a dependency injection framework available on the Unity Asset Store.
-* Plain C# binder classes (`BinderOneWay<T>`, `BinderTwoWay<T>`) implementing InitArgs `IInitializable<T1, T2>` and `IDisposable`.
+* Plain C# binder classes (`BinderOneWay<T>`, `BinderTwoWay<T>`) using constructor injection and implementing `IDisposable`.
 * Includes InitArgs `WrapperInitializer` binder components (`FloatBinderOneWayInitializer`, `StatRangeBinderOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# binders.
 
 ---

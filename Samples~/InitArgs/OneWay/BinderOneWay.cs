@@ -1,18 +1,17 @@
 using System;
-using Sisus.Init;
 
 namespace DesignPatterns.UI.MVP.InitArgs
 {
     /// <summary>
-    /// Plain C# 1-way binder implementing InitArgs IInitializable and IDisposable.
+    /// Plain C# 1-way binder using constructor injection and implementing IDisposable.
     /// </summary>
     /// <typeparam name="T">The bound data type.</typeparam>
-    public class BinderOneWay<T> : IInitializable<IReadOnlyStat<T>, IView<T>>, IDisposable
+    public class BinderOneWay<T> : IDisposable
     {
-        private IReadOnlyStat<T> model;
-        private IView<T> view;
+        private readonly IReadOnlyStat<T> model;
+        private readonly IView<T> view;
 
-        public void Init(IReadOnlyStat<T> model, IView<T> view)
+        public BinderOneWay(IReadOnlyStat<T> model, IView<T> view)
         {
             if (model == null)
             {

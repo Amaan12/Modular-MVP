@@ -13,6 +13,6 @@ namespace DesignPatterns.UI.MVP.InitArgs
     public class StatRangeBinderOneWayInitializer : WrapperInitializer<StatRangeBinderOneWayWrapper, BinderOneWay<StatRange>, IReadOnlyStat<StatRange>, IView<StatRange>>
     {
         protected override BinderOneWay<StatRange> CreateWrappedObject(IReadOnlyStat<StatRange> model, IView<StatRange> view)
-            => new BinderOneWay<StatRange>();
+            => new BinderOneWay<StatRange>(model, view);
     }
 }

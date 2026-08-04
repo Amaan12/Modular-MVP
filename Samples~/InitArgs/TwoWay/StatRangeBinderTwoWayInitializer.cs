@@ -13,6 +13,6 @@ namespace DesignPatterns.UI.MVP.InitArgs
     public class StatRangeBinderTwoWayInitializer : WrapperInitializer<StatRangeBinderTwoWayWrapper, BinderTwoWay<StatRange>, IStat<StatRange>, ITwoWayView<StatRange>>
     {
         protected override BinderTwoWay<StatRange> CreateWrappedObject(IStat<StatRange> model, ITwoWayView<StatRange> view)
-            => new BinderTwoWay<StatRange>();
+            => new BinderTwoWay<StatRange>(model, view);
     }
 }

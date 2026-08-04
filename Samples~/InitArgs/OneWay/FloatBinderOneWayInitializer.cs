@@ -13,6 +13,6 @@ namespace DesignPatterns.UI.MVP.InitArgs
     public class FloatBinderOneWayInitializer : WrapperInitializer<FloatBinderOneWayWrapper, BinderOneWay<float>, IReadOnlyStat<float>, IView<float>>
     {
         protected override BinderOneWay<float> CreateWrappedObject(IReadOnlyStat<float> model, IView<float> view)
-            => new BinderOneWay<float>();
+            => new BinderOneWay<float>(model, view);
     }
 }

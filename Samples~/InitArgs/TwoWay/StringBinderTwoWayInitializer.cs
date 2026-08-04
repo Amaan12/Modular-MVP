@@ -13,6 +13,6 @@ namespace DesignPatterns.UI.MVP.InitArgs
     public class StringBinderTwoWayInitializer : WrapperInitializer<StringBinderTwoWayWrapper, BinderTwoWay<string>, IStat<string>, ITwoWayView<string>>
     {
         protected override BinderTwoWay<string> CreateWrappedObject(IStat<string> model, ITwoWayView<string> view)
-            => new BinderTwoWay<string>();
+            => new BinderTwoWay<string>(model, view);
     }
 }
