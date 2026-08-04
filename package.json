@@ -22,7 +22,7 @@
     },
     {
       "displayName": "InitArgs Presenters",
-      "description": "InitArgs plain C# presenters and initializers sample.",
+      "description": "InitArgs plain C# presenters and initializers sample (requires InitArgs DI asset from Unity Asset Store).",
       "path": "Samples~/InitArgs"
     }
   ]

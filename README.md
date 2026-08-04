@@ -37,7 +37,7 @@ To install this package directly into your Unity project's `Packages/` folder:
 
 Once installed, 2 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
 1. **Basic MVP Sample**: Contains `Health.cs` and `IDamageable.cs` domain scripts.
-2. **InitArgs Presenters**: Contains plain C# `InitArgs` binders and initializers (`OneWay` and `TwoWay`).
+2. **InitArgs Presenters**: Contains plain C# binders and initializers (`OneWay` and `TwoWay`) for **InitArgs** (a dependency injection asset available on the Unity Asset Store).
 
 Click **Import** next to either sample to copy it into your project's `Assets/Samples/` folder.
 
@@ -103,6 +103,7 @@ Binders act as the glue between Models and Views. They auto-subscribe on enable 
 * Inspector drag-and-drop auto-binding via 1-line subclass binders (`FloatBinderOneWay`, `StatRangeBinderOneWay`, etc.).
 
 #### InitArgs Plain C# Binders & Initializers (`Samples~/InitArgs/`)
+* Integration for **InitArgs**—a dependency injection framework available on the Unity Asset Store.
 * Plain C# binder classes (`BinderOneWay<T>`, `BinderTwoWay<T>`) implementing InitArgs `IInitializable<T1, T2>` and `IDisposable`.
 * Includes InitArgs `WrapperInitializer` binder components (`FloatBinderOneWayInitializer`, `StatRangeBinderOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# binders.
 
