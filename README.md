@@ -19,6 +19,9 @@ By using the MVP architecture, we separate the model (e.g., health) from the UI 
 
 ## 📦 Installation via Unity Package Manager (Git URL)
 
+> [!IMPORTANT]
+> Make sure **Git** is pre-installed on your system and added to your `PATH` before proceeding. Unity Package Manager requires Git to fetch packages via Git URL.
+
 To install this package directly into your Unity project's `Packages/` folder:
 
 1. Open your Unity Project.
