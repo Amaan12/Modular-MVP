@@ -35,11 +35,12 @@ To install this package directly into your Unity project's `Packages/` folder:
 
 ### 📥 Downloading Samples
 
-Once installed, 4 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
+Once installed, 5 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
 1. **Basic MVP Sample**: Basic MVP UI setup with scenes, prefabs, and domain scripts (`Health.cs`, `HealthChanger.cs`).
 2. **DOTween MVP Sample**: [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) animated UI views (punch, shake, rotate, color flash, pop) with demo scene, prefabs, and scripts.
 3. **InitArgs Presenters**: Plain C# binders and initializers (`OneWay` and `TwoWay`) for [InitArgs](https://assetstore.unity.com/packages/tools/utilities/init-args-200530) (a dependency injection asset available on the Unity Asset Store).
 4. **Recyclable Scroll View MVP**: Optimized list and grid view sample integrating [Recyclable Scroll Rect - Optimized List/Grid View](https://assetstore.unity.com/packages/tools/gui/recyclable-scroll-rect-optimized-list-grid-view-178560) with Modular MVP architecture.
+5. **Regular Variables Sample**: Demonstrates how you can bind any variable with a generic `ActionPresenter<T>` without requiring `IStat<T>`.
 
 Click **Import** next to any sample to copy it into your project's `Assets/Samples/` folder.
 
@@ -72,7 +73,8 @@ Packages/com.modular.mvp/
     ├── BasicMVP/             (Downloadable Sample 1: Basic MVP Setup with Scene & Prefabs)
     ├── DOTweenMVP/           (Downloadable Sample 2: DOTween Animated Views & Demo Scene)
     ├── InitArgs/             (Downloadable Sample 3: Plain C# Binders)
-    └── RecyclableScrollViewMVP/ (Downloadable Sample 4: Recyclable Scroll View MVP Sample)
+    ├── RecyclableScrollViewMVP/ (Downloadable Sample 4: Recyclable Scroll View MVP Sample)
+    └── RegularVariables/     (Downloadable Sample 5: Bind Any Variable with ActionPresenter)
 ```
 
 ---
@@ -100,7 +102,7 @@ Packages/com.modular.mvp/
 Binders act as the glue between Models and Views. They auto-subscribe on enable and auto-unsubscribe on disable.
 
 #### Plain C# Regular Classes (`Presenter/RegularClasses/`)
-* **`ActionPresenter<T>`**: Plain C# presenter for 1-way event binding directly from actions/events without requiring `IStat`.
+* **`ActionPresenter<T>`**: Plain C# presenter for 1-way event binding directly from actions/events without requiring `IStat`. Can bind any variable with a generic `ActionPresenter<T>`.
 * **`BinderOneWay<T>`**: Plain C# 1-way binder connecting `IReadOnlyStat<T>` to `IView<T>` using constructor injection and implementing `IDisposable`.
 * **`BinderTwoWay<T>`**: Plain C# 2-way binder connecting `IStat<T>` to `ITwoWayView<T>`.
 
@@ -114,6 +116,9 @@ Binders act as the glue between Models and Views. They auto-subscribe on enable 
 #### Recyclable Scroll View Sample (`Samples~/RecyclableScrollViewMVP/`)
 * Integration sample demonstrating how to bind recycled list cell item data using [Recyclable Scroll Rect - Optimized List/Grid View](https://assetstore.unity.com/packages/tools/gui/recyclable-scroll-rect-optimized-list-grid-view-178560).
 * Includes `RecyclableListPresenter` for binding a data list to recyclerview adapter callbacks and updating item cell views efficiently.
+
+#### Regular Variables Sample (`Samples~/RegularVariables/`)
+* Integration sample demonstrating how you can bind any variable with a generic `ActionPresenter<T>` without implementing `IStat<T>`.
 
 ---
 

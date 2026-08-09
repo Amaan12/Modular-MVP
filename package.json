@@ -34,6 +34,11 @@
       "displayName": "Recyclable Scroll View MVP",
       "description": "Optimized list view sample integrating Recyclable Scroll Rect with Modular MVP architecture (requires Recyclable Scroll Rect asset).",
       "path": "Samples~/RecyclableScrollViewMVP"
+    },
+    {
+      "displayName": "Regular Variables Sample",
+      "description": "Sample demonstrating how to bind any regular variable or event using generic ActionPresenter without implementing IStat.",
+      "path": "Samples~/RegularVariables"
     }
   ]
 }
