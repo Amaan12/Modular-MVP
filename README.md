@@ -37,8 +37,8 @@ To install this package directly into your Unity project's `Packages/` folder:
 
 Once installed, 4 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
 1. **Basic MVP Sample**: Basic MVP UI setup with scenes, prefabs, and domain scripts (`Health.cs`, `HealthChanger.cs`).
-2. **DOTween MVP Sample**: DOTween animated UI views (punch, shake, rotate, color flash, pop) with demo scene, prefabs, and scripts.
-3. **InitArgs Presenters**: Plain C# binders and initializers (`OneWay` and `TwoWay`) for **InitArgs** (a dependency injection asset available on the Unity Asset Store).
+2. **DOTween MVP Sample**: [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) animated UI views (punch, shake, rotate, color flash, pop) with demo scene, prefabs, and scripts.
+3. **InitArgs Presenters**: Plain C# binders and initializers (`OneWay` and `TwoWay`) for [InitArgs](https://assetstore.unity.com/packages/tools/utilities/init-args-200530) (a dependency injection asset available on the Unity Asset Store).
 4. **Recyclable Scroll View MVP**: Optimized list and grid view sample integrating [Recyclable Scroll Rect - Optimized List/Grid View](https://assetstore.unity.com/packages/tools/gui/recyclable-scroll-rect-optimized-list-grid-view-178560) with Modular MVP architecture.
 
 Click **Import** next to any sample to copy it into your project's `Assets/Samples/` folder.
@@ -104,8 +104,11 @@ Binders act as the glue between Models and Views. They auto-subscribe on enable 
 * **`BinderOneWay<T>`**: Plain C# 1-way binder connecting `IReadOnlyStat<T>` to `IView<T>` using constructor injection and implementing `IDisposable`.
 * **`BinderTwoWay<T>`**: Plain C# 2-way binder connecting `IStat<T>` to `ITwoWayView<T>`.
 
+#### DOTween Views & Animators (`Samples~/DOTweenMVP/`)
+* Integration sample demonstrating animated UI views (punch, shake, rotate, color flash, pop) using [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676).
+
 #### InitArgs Initializers (`Samples~/InitArgs/`)
-* Integration for **InitArgs**—a dependency injection framework available on the Unity Asset Store.
+* Integration for [InitArgs](https://assetstore.unity.com/packages/tools/utilities/init-args-200530)—a dependency injection framework available on the Unity Asset Store.
 * Includes InitArgs `WrapperInitializer` binder components (`FloatBinderOneWayInitializer`, `StatRangeBinderOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# binders.
 
 #### Recyclable Scroll View Sample (`Samples~/RecyclableScrollViewMVP/`)
