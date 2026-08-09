@@ -29,6 +29,11 @@
       "displayName": "InitArgs Presenters",
       "description": "InitArgs plain C# presenters and initializers sample (requires InitArgs DI asset from Unity Asset Store).",
       "path": "Samples~/InitArgs"
+    },
+    {
+      "displayName": "Recyclable Scroll View MVP",
+      "description": "Optimized list view sample integrating Recyclable Scroll Rect with Modular MVP architecture (requires Recyclable Scroll Rect asset).",
+      "path": "Samples~/RecyclableScrollViewMVP"
     }
   ]
 }

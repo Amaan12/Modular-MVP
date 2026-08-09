@@ -35,10 +35,11 @@ To install this package directly into your Unity project's `Packages/` folder:
 
 ### 📥 Downloading Samples
 
-Once installed, 3 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
+Once installed, 4 downloadable samples are available directly in Unity Package Manager under the **Samples** tab of this package:
 1. **Basic MVP Sample**: Basic MVP UI setup with scenes, prefabs, and domain scripts (`Health.cs`, `HealthChanger.cs`).
 2. **DOTween MVP Sample**: DOTween animated UI views (punch, shake, rotate, color flash, pop) with demo scene, prefabs, and scripts.
 3. **InitArgs Presenters**: Plain C# binders and initializers (`OneWay` and `TwoWay`) for **InitArgs** (a dependency injection asset available on the Unity Asset Store).
+4. **Recyclable Scroll View MVP**: Optimized list and grid view sample integrating [Recyclable Scroll Rect - Optimized List/Grid View](https://assetstore.unity.com/packages/tools/gui/recyclable-scroll-rect-optimized-list-grid-view-178560) with Modular MVP architecture.
 
 Click **Import** next to any sample to copy it into your project's `Assets/Samples/` folder.
 
@@ -70,7 +71,8 @@ Packages/com.modular.mvp/
 └── Samples~/
     ├── BasicMVP/             (Downloadable Sample 1: Basic MVP Setup with Scene & Prefabs)
     ├── DOTweenMVP/           (Downloadable Sample 2: DOTween Animated Views & Demo Scene)
-    └── InitArgs/             (Downloadable Sample 3: Plain C# Binders)
+    ├── InitArgs/             (Downloadable Sample 3: Plain C# Binders)
+    └── RecyclableScrollViewMVP/ (Downloadable Sample 4: Recyclable Scroll View MVP Sample)
 ```
 
 ---
@@ -105,6 +107,10 @@ Binders act as the glue between Models and Views. They auto-subscribe on enable 
 #### InitArgs Initializers (`Samples~/InitArgs/`)
 * Integration for **InitArgs**—a dependency injection framework available on the Unity Asset Store.
 * Includes InitArgs `WrapperInitializer` binder components (`FloatBinderOneWayInitializer`, `StatRangeBinderOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# binders.
+
+#### Recyclable Scroll View Sample (`Samples~/RecyclableScrollViewMVP/`)
+* Integration sample demonstrating how to bind recycled list cell item data using [Recyclable Scroll Rect - Optimized List/Grid View](https://assetstore.unity.com/packages/tools/gui/recyclable-scroll-rect-optimized-list-grid-view-178560).
+* Includes `RecyclableListPresenter` for binding a data list to recyclerview adapter callbacks and updating item cell views efficiently.
 
 ---
 
