@@ -1,4 +1,5 @@
 using Sisus.Init;
+using DesignPatterns.UI.MVP;
 
 namespace DesignPatterns.UI.MVP.InitArgs
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace DesignPatterns.UI.MVP.InitArgs
+namespace DesignPatterns.UI.MVP
 {
     /// <summary>
     /// Plain C# 1-way binder using constructor injection and implementing IDisposable.

@@ -60,9 +60,10 @@ Packages/com.modular.mvp/
 │   ├── Model/
 │   │   └── StatRange.cs
 │   ├── Presenter/
-│   │   └── MonoBehaviours/    (Pure UnityEngine.MonoBehaviour Binders)
-│   │       ├── OneWay/
-│   │       └── TwoWay/
+│   │   ├── MonoBehaviours/    (Pure UnityEngine.MonoBehaviour Binders)
+│   │   │   ├── OneWay/
+│   │   │   └── TwoWay/
+│   │   └── RegularClasses/    (Plain C# Binders: ActionPresenter, BinderOneWay, BinderTwoWay)
 │   └── View/
 │       ├── SliderView.cs
 │       └── TextView.cs
@@ -96,13 +97,13 @@ Packages/com.modular.mvp/
 
 Binders act as the glue between Models and Views. They auto-subscribe on enable and auto-unsubscribe on disable.
 
-#### Standard Unity MonoBehaviours (`Presenter/MonoBehaviours/`)
-* Pure `UnityEngine.MonoBehaviour` classes with zero external framework dependencies.
-* Inspector drag-and-drop auto-binding via 1-line subclass binders (`FloatBinderOneWay`, `StatRangeBinderOneWay`, etc.).
+#### Plain C# Regular Classes (`Presenter/RegularClasses/`)
+* **`ActionPresenter<T>`**: Plain C# presenter for 1-way event binding directly from actions/events without requiring `IStat`.
+* **`BinderOneWay<T>`**: Plain C# 1-way binder connecting `IReadOnlyStat<T>` to `IView<T>` using constructor injection and implementing `IDisposable`.
+* **`BinderTwoWay<T>`**: Plain C# 2-way binder connecting `IStat<T>` to `ITwoWayView<T>`.
 
-#### InitArgs Plain C# Binders & Initializers (`Samples~/InitArgs/`)
+#### InitArgs Initializers (`Samples~/InitArgs/`)
 * Integration for **InitArgs**—a dependency injection framework available on the Unity Asset Store.
-* Plain C# binder classes (`BinderOneWay<T>`, `BinderTwoWay<T>`) using constructor injection and implementing `IDisposable`.
 * Includes InitArgs `WrapperInitializer` binder components (`FloatBinderOneWayInitializer`, `StatRangeBinderOneWayInitializer`, etc.) for Inspector drag-and-drop initialization of plain C# binders.
 
 ---
